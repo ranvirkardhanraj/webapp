@@ -1,2 +1,2 @@
 [kube-master]
-192.168.189.138
+192.168.189.138 ansible_user=root
