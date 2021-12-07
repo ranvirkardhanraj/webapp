@@ -1,6 +1,6 @@
 ---
 - name: 'Deploying myweb application'
-  host: kube-master
+  hosts: kube-master
   ignore_errors: yes
   become: yes
   tasks:
