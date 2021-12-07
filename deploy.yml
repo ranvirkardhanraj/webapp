@@ -5,8 +5,8 @@
   become: yes
   tasks:
   - name: 'Deleting old version'
-    command: 'kubectl delete deployment myweb'
+    command: kubectl delete deployment myweb
   - name: 'Creating deployment'
-    command: 'kubectl create deployment myweb --image=dhanrajranvirkar/myweb:"{{ image_version }}"'
+    command: kubectl create deployment myweb --image=dhanrajranvirkar/myweb:"{{ image_version }}"
   - name: 'Exposing Deployment with type NodePort'
-    command: 'kubectl expose deployment myweb --port=8888 --target-port=8080 --type=NodePort'
+    command: kubectl expose deployment myweb --port=8888 --target-port=8080 --type=NodePort
